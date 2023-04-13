@@ -7,13 +7,8 @@
     <link rel="icon" href="bilder/ikon.png">
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
     <style>
 
-        
         body {
           animation: fadeInAnimation ease 3s;
           animation-iteration-count: 1;
@@ -23,8 +18,12 @@
           background-attachment: fixed;
           background-size: cover;
           background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
         }
-        
+
         @keyframes fadeInAnimation {
             0% {
                 opacity: 0;
@@ -34,22 +33,68 @@
             }
         }
 
+        .logo-link {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            margin: 10px auto;
+        }
 
+        .logo-twitter {
+            background-image: url('bilder/twitter.png');
+        }
 
-    </style> 
-    
+        .logo-instagram {
+            background-image: url('bilder/instagram.png');
+        }
 
-    <p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Zebbson2">Twitter</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/zebbson_/">Instagram</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw">Youtube</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/zebbson">Twitch</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/UCJuxwSKCS">Discord</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://steamcommunity.com/id/Zebbson1337">Steam</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/kalkylator/">My Calculator</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/Snake/">Snake Game</a></p>
+        .logo-youtube {
+            background-image: url('bilder/youtube.png');
+        }
+
+        .logo-twitch {
+            background-image: url('bilder/twitch.png');
+        }
+
+        .logo-discord {
+            background-image: url('bilder/discord.png');
+        }
+
+        .logo-steam {
+            background-image: url('bilder/steam.png');
+        }
+
+        .logo-calculator {
+            background-image: url('bilder/calculator.png');
+        }
+
+        .logo-snake {
+            background-image: url('bilder/snake.png');
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Zebbson2" class="logo-link logo-twitter"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/zebbson_/" class="logo-link logo-instagram"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw" class="logo-link logo-youtube"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/zebbson" class="logo-link logo-twitch"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/UCJuxwSKCS" class="logo-link logo-discord"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://steamcommunity.com/id/Zebbson1337" class="logo-link logo-steam"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/kalkylator/" class="logo-link logo-calculator"></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/Snake/" class="logo-link logo-snake"></a>
 
     <footer>© 2023 Zebbson</footer>
-    
+
 </body>
 
 </html>
