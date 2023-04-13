@@ -1,100 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Zebbson</title>
-    <link href="stiler/main.css" rel="stylesheet"/>
-    <link rel="icon" href="bilder/ikon.png">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-        body {
-          animation: fadeInAnimation ease 3s;
+  <title>My Links</title>
+  <style>
+    body {
+      background-image: url('file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/ov-22.png'); /* Replace with the path to your custom background image */
+      animation: fadeInAnimation ease 3s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;
-          background-image: url('bilder/ov-22.png');
+          background-image: url('bilder/BG.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
-          background-position: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-        }
+    }
 
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .logo-link {
-            display: block;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
-            margin: 10px auto;
-        }
+    .logo {
+      max-width: 80px;
+      margin: 10px;
+    }
 
-        .logo-twitter {
-            background-image: url('bilder/twitter.png');
-        }
-
-        .logo-instagram {
-            background-image: url('bilder/instagram.png');
-        }
-
-        .logo-youtube {
-            background-image: url('bilder/youtube.png');
-        }
-
-        .logo-twitch {
-            background-image: url('bilder/twitch.png');
-        }
-
-        .logo-discord {
-            background-image: url('bilder/discord.png');
-        }
-
-        .logo-steam {
-            background-image: url('bilder/steam.png');
-        }
-
-        .logo-calculator {
-            background-image: url('bilder/calculator.png');
-        }
-
-        .logo-snake {
-            background-image: url('bilder/snake.png');
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-    </style>
+    .link {
+      display: inline-block;
+      margin: 20px;
+    }
+  </style>
 </head>
-
 <body>
-
-    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Zebbson2" class="logo-link logo-twitter"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/zebbson_/" class="logo-link logo-instagram"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw" class="logo-link logo-youtube"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/zebbson" class="logo-link logo-twitch"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/UCJuxwSKCS" class="logo-link logo-discord"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://steamcommunity.com/id/Zebbson1337" class="logo-link logo-steam"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/kalkylator/" class="logo-link logo-calculator"></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://zebbson.com/Snake/" class="logo-link logo-snake"></a>
-
-    <footer>© 2023 Zebbson</footer>
-
+  <div class="container">
+    <div class="link">
+      <a href="https://www.twitch.tv/zebbson" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/Twitch.png" alt="Twitch"></a>
+      <a href="https://twitter.com/Zebbson2" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/Twitter.png" alt="Twitter"></a>
+      <a href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/Youtube.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/zebbson_/" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/Instagram.png" alt="Instagram"></a>
+      <a href="https://discord.com/invite/UCJuxwSKCS" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/discord.png" alt="Discord"></a>
+      <a href="https://steamcommunity.com/id/Zebbson1337/" target="_blank"><img class="logo" src="file:///C:/Users/Sebas/OneDrive/Skrivbord/My%20site/zebbson.githup.io/bilder/Steam.png" alt="Steam"></a>
+    </div>
+  </div>
 </body>
-
 </html>
+
