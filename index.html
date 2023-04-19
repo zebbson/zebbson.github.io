@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Zebbson</title>
-  <link rel="icon" href="bilder/ikon.png">
-  <style>
+	<meta charset="UTF-8">
+	<title>Zebbson</title>
+    <link rel="icon" href="bilder/ikon.png">
+	<style>
     body {
       background-image: url('bilder/ov-22.png');
       animation: fadeInAnimation ease 3s;
@@ -18,47 +19,111 @@
       align-items: center;
       height: 100vh;
     }
-
-    .container {
-      text-align: center;
-    }
-
-    .logo {
-      max-width: 80px;
-      margin: 10px;
-    }
-
-    .link {
-      display: inline-block;
-      margin: 20px;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 12px;
-    }
-  </style>
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		h1 {
+			font-size: 48px;
+			margin: 0 0 20px;
+		}
+		
+		.social-media {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.social-media a {
+			display: flex;
+			align-items: center;
+			margin: 10px 0;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		}
+		
+		.social-media a:hover {
+			background-color: #444;
+		}
+		
+		.twitch {
+			background-color: #9146ff;
+		}
+		
+		.twitter {
+			background-color: #1da1f2;
+		}
+		
+		.youtube {
+			background-color: #ff0000;
+		}
+		
+		.instagram {
+			background-color: #c13584;
+		}
+		
+		.discord {
+			background-color: #7289da;
+		}
+		
+		.steam {
+			background-color: #171a21;
+		}
+		
+		.social-media a img {
+			margin-right: 10px;
+			height: 40px;
+			width: auto;
+		}
+	</style>
 </head>
 <body>
-  <div class="container">
-    <div class="link">
-      <a href="https://www.twitch.tv/zebbson" target="_blank"><img class="logo" src="https://www.freeiconspng.com/uploads/download-circle-twitch-logo-pink-outline-png-2.png" alt="Twitch"></a>
-      <a href="https://twitter.com/Zebbson2" target="_blank"><img class="logo" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png" alt="Twitter"></a>
-      <a href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw" target="_blank"><img class="logo" src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube"></a>
-      <a href="https://www.instagram.com/zebbson_/" target="_blank"><img class="logo" src="https://re-form.se/wp-content/uploads/2020/02/new-instagram-logo-png-transparent-light.png" alt="Instagram"></a>
-      <a href="https://discord.com/invite/UCJuxwSKCS" target="_blank"><img class="logo" src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="Discord"></a>
-      <a href="https://steamcommunity.com/id/Zebbson1337/" target="_blank"><img class="logo" src="https://www.pngmart.com/files/22/Steam-Logo-PNG-Image.png" alt="Steam"></a>
-      <a href="https://zebbson.com/kalkylator/" target="_blank"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/2344/2344132.png" alt="Calculator"></a>
-      <a href="https://zebbson.com/Snake/" target="_blank"><img class="logo" src="https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/ae/1d/8c/ae1d8c8b-56b9-cee9-5b76-5c31b52a730b/source/512x512bb.jpg" alt="Snake Game"></a>
+	<div class="container">
+		<div class="social-media">
+			<a class="twitch" href="https://www.twitch.tv/zebbson">
+				<img src="https://cdn.iconscout.com/icon/free/png-512/twitch-11-461838.png?f=avif&w=256" alt="Twitch Logo">
+				Twitch
+			</a>
+			<a class="twitter" href="https://twitter.com/Zebbson2">
+				<img src="https://cdn.iconscout.com/icon/free/png-512/twitter-200-461839.png?f=avif&w=256" alt="Twitter Logo">
+				Twitter
+			</a>
+			<a class="youtube" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw">
+				<img src="https://cdn.iconscout.com/icon/free/png-512/youtube-82-189778.png?f=avif&w=256" alt="YouTube Logo">
+				YouTube
+			</a>
+			<a class="instagram" href="https://www.instagram.com/zebbson_/">
+				<img src="https://cdn.iconscout.com/icon/free/png-256/steam-3-569476.png" alt="Instagram Logo">
+				Instagram
+			</a>
+			<a class="discord" href="https://discord.com/invite/UCJuxwSKCS">
+				<img src="https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png" alt="Discord Logo">
+				Discord
+            </a>
+            <a class="steam" href="https://steamcommunity.com/id/Zebbson1337/">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/steam-2752064-2284881.png?f=avif&w=256" alt="Steam Logo">
+                Steam
+            </a>
+            <div class="footer">
+                &copy; 2023 Zebbson. All rights reserved. | Designed by <a href="https://www.twitch.tv/zebbson" target="_blank">Zebbson</a>
+        </div>
     </div>
-    <div class="footer">
-      &copy; 2023 Zebbson. All rights reserved. | Designed by <a href="https://zebbson.com/" target="_blank">Zebbson</a>
-    </div>
-  </div>
-</body>
-</html>
-
+    
+    </body>
+    </html>
