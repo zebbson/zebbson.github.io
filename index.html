@@ -1,152 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Zebbson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zebbson</title>
     <link rel="icon" href="bilder/ikon.png">
-	<style>
-
-    body {
-  background-image: url('bilder/ov-22.png');
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-
-		body {
-			background-color: #f5f5f5;
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		
-		h1 {
-			font-size: 48px;
-			margin: 0 0 20px;
-		}
-		
-		.social-media {
-			display: flex;
-			flex-direction: column;
-			align-items: left;
-		}
-		
-		.social-media a {
-			display: flex;
-			align-items: center;
-			margin: 10px 0;
-			padding: 10px;
-			border-radius: 10px;
-			color: #fff;
-			font-size: 24px;
-			font-weight: bold;
-			text-decoration: none;
-			transition: background-color 0.3s ease;
-		}
-		
-		.social-media a:hover {
-			background-color: #444;
-		}
-		
-		.twitch {
-			background-color: #9146ff;
-		}
-		
-		.twitter {
-			background-color: #1da1f2;
-		}
-		
-		.youtube {
-			background-color: #ff0000;
-		}
-		
-		
-		.discord {
-			background-color: #7289da;
-		}
-		
-		.steam {
-			background-color: #171a21;
-		}
-
-		
-		
-		.social-media a img {
-			margin-right: 10px;
-			height: 40px;
-			width: auto;
-		}
-		
-
-		
+    <style>
+        /* Background animation */
         @keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+            0% { opacity: 0; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
 
+        /* Main body styling */
+        body {
+            background-image: url('bilder/ov-22.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInAnimation ease 2s forwards;
+            overflow: hidden;
+        }
+
+        /* Container styling */
+        .container {
+            text-align: center;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeInAnimation ease 2s forwards;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        /* Social media button container */
+        .social-media {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* Social media buttons */
+        .social-media a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-media a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Individual platform button colors */
+        .twitch { background-color: #9146ff; }
+        .twitter { background-color: #1da1f2; }
+        .youtube { background-color: #ff0000; }
+        .discord { background-color: #7289da; }
+        .steam { background-color: #171a21; }
+        .donate { background-color: #2ada39; }
+
+        /* Icons in buttons */
+        .social-media a img {
+            margin-right: 15px;
+            height: 40px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        /* Footer styling */
         .footer {
-			background-color: #fff;
-			color: #333;
-			padding: 10px;
-			text-align: center;
-			font-size: 14px;
-			width: 100%;
-			box-sizing: border-box;
-			position: absolute;
-			bottom: 0;
-		}
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
 
-	</style>
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .social-media a {
+                font-size: 20px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="social-media">
-			<a class="twitch" href="https://www.twitch.tv/zebbson">
-				<img src="https://cdn.iconscout.com/icon/free/png-512/twitch-11-461838.png?f=avif&w=256" alt="Twitch Logo">
-				Twitch
-			</a>
-			<a class="twitter" href="https://twitter.com/Zebbson2">
-				<img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo">
-				Twitter
-			</a>
-			<a class="youtube" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw">
-				<img src="https://cdn.iconscout.com/icon/free/png-512/youtube-82-189778.png?f=avif&w=256" alt="YouTube Logo">
-				YouTube
-			</a>
-			<a class="discord" href="https://discord.com/invite/UCJuxwSKCS">
-				<img src="https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png" alt="Discord Logo">
-				Discord
+    <div class="container">
+        <h1>Zebbson</h1>
+        <div class="social-media">
+            <a class="twitch" href="https://www.twitch.tv/zebbson">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/twitch-11-461838.png?f=avif&w=256" alt="Twitch Logo">
+                Twitch
+            </a>
+            <a class="twitter" href="https://twitter.com/Zebbson2">
+                <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo">
+                Twitter
+            </a>
+            <a class="youtube" href="https://www.youtube.com/channel/UCOyWmL-_KeLcjZP8j1XmkXw">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/youtube-82-189778.png?f=avif&w=256" alt="YouTube Logo">
+                YouTube
+            </a>
+            <a class="discord" href="https://discord.com/invite/UCJuxwSKCS">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png" alt="Discord Logo">
+                Discord
             </a>
             <a class="steam" href="https://steamcommunity.com/profiles/76561198274646878">
                 <img src="https://cdn.iconscout.com/icon/free/png-512/steam-2752064-2284881.png?f=avif&w=256" alt="Steam Logo">
                 Steam
             </a>
-			
-		</div>
+            <a class="donate" href="https://streamelements.com/zebbson/tip">
+                <img src="https://cdn-icons-png.freepik.com/512/176/176696.png" alt="Twitch Logo">
+                Donate
+            </a>
+        </div>
         <div class="footer">
             &copy; Zebbson 2024. All rights reserved.
         </div>
-	</div>
+    </div>
 </body>
 </html>
