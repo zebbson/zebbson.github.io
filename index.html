@@ -103,6 +103,19 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        /* Visitor counter styling */
+        .visitor-counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
         /* Responsive design */
         @media (max-width: 600px) {
             .social-media a {
@@ -116,6 +129,9 @@
     </style>
 </head>
 <body>
+    <div class="visitor-counter">
+        Visitors: <span id="visitor-count">0</span>
+    </div>
     <div class="container">
         <h1>Zebbson</h1>
         <div class="social-media">
@@ -148,5 +164,20 @@
             &copy; Zebbson 2024. All rights reserved.
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        // Check if the visitor count exists in localStorage
+        if (localStorage.getItem('visitorCount')) {
+            // Increment the count by 1
+            var visitorCount = parseInt(localStorage.getItem('visitorCount')) + 1;
+        } else {
+            // If not, initialize it to 1
+            var visitorCount = 1;
+        }
+        
+        // Save the updated count back to localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+
+// Visa antalet besökare på sidan
+document.getElementById('visitor-count').textContent = visitorCount;
+</script>
