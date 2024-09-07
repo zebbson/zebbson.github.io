@@ -29,6 +29,17 @@
             align-items: center;
             animation: fadeInAnimation ease 2s forwards;
             overflow: hidden;
+            position: relative; /* Needed for the canvas to be absolutely positioned */
+        }
+
+        /* Canvas styling for snow */
+        #snow-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         /* Container styling */
@@ -38,7 +49,8 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-            animation: fadeInAnimation ease 2s forwards;
+            position: relative;
+            z-index: 1; /* Ensure container is above the canvas */
         }
 
         /* Title styling */
@@ -72,11 +84,32 @@
             text-decoration: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative; /* Needed for the light effect */
+            overflow: hidden;
         }
 
         .social-media a:hover {
             transform: translateY(-5px);
             box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Light flash effect */
+        .social-media a:active::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            animation: pulse 0.6s ease-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            100% { transform: translate(-50%, -50%) scale(1); }
         }
 
         /* Individual platform button colors */
@@ -116,6 +149,7 @@
     </style>
 </head>
 <body>
+    <canvas id="snow-canvas"></canvas> <!-- Canvas för snöfall -->
     <div class="container">
         <h1>Zebbson</h1>
         <div class="social-media">
@@ -148,5 +182,56 @@
             &copy; Zebbson 2024. All rights reserved.
         </div>
     </div>
+
+    <!-- Snöfallsskript -->
+    <script>
+        var canvas = document.getElementById('snow-canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var snowflakes = [];
+
+        function Snowflake(x, y, r, d) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.d = d;
+            this.update = function() {
+                this.y += Math.pow(this.d, 2);
+                if (this.y > canvas.height) {
+                    this.y = 0;
+                }
+            };
+            this.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+                ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+                ctx.fill();
+            };
+        }
+
+        function createSnowflakes() {
+            for (var i = 0; i < 100; i++) {
+                snowflakes.push(new Snowflake(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 3 + 2, Math.random() * 2));
+            }
+        }
+
+        function updateSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < snowflakes.length; i++) {
+                snowflakes[i].update();
+                snowflakes[i].draw();
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            updateSnowflakes();
+        }
+
+        createSnowflakes();
+        animate();
+    </script>
 </body>
 </html>
