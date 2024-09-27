@@ -6,7 +6,6 @@
     <title>Zebbson</title>
     <link rel="icon" href="bilder/icon.png">
     <style>
-        
         /* Background animation */
         @keyframes fadeInAnimation {
             0% { opacity: 0; transform: scale(1.05); }
@@ -33,6 +32,15 @@
             position: relative; /* Needed for the canvas to be absolutely positioned */
         }
 
+        
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+        
         /* Canvas styling for snow */
         #snow-canvas {
             position: absolute;
@@ -40,7 +48,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 0; /* Place canvas behind other content */
+            z-index: 0;
         }
 
         /* Container styling */
@@ -115,9 +123,9 @@
 
         /* Individual platform button colors */
         .twitch { background-color: #9146ff; }
-        .twitter { background-color: #565e68; }
+        .twitter { background-color: #1a2227; }
         .youtube { background-color: #ff0000; }
-        .discord { background-color: #7289da; }
+        .discord { background-color: #4c6eec; }
         .steam { background-color: #171a21; }
         .donate { background-color: #2ada39; }
 
@@ -148,6 +156,8 @@
             }
         }
     </style>
+
+    
 </head>
 <body>
     <canvas id="snow-canvas"></canvas> <!-- Canvas för snöfall -->
@@ -230,3 +240,11 @@
             requestAnimationFrame(animate);
             updateSnowflakes();
         }
+
+        createSnowflakes();
+        animate();
+    </script>
+
+
+</body>
+</html>
